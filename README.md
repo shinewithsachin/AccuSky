@@ -51,6 +51,8 @@ AccuSky manages a complex data flow to ensure security and performance.
 ---
 ## 📸 Screenshots
 ![](Screenshot%202026-01-13%20030043.png)
+![](Screenshot%202026-01-13%20030056.png)
+![](Screenshot%202026-01-13%20030108.png)
 
 
 ---
