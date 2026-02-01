@@ -3,6 +3,10 @@
 AccuSky is a custom ServiceNow Service Portal application designed to provide real-time weather tracking, 5-day forecasting, and data visualization for cities globally. Beyond basic weather reporting, it features an **Intelligent Advice System** that interprets environmental data to provide actionable lifestyle recommendations, such as "Wear a jacket" or "Carry an umbrella".
 
 ---
+## 📺 Project Demo
+Experience the Intelligent Weather Dashboard in action: **[Watch the Live Demo here](https://drive.google.com/file/d/1z3Jjfo-6Kez_eiroql_kUI8V8OJTDEEx/view?usp=sharing)**
+
+---
 
 ## 🚀 Project Overview
 The Intelligent Weather Dashboard is built on the ServiceNow platform as a custom Service Portal widget. It serves as a comprehensive tool for monitoring global weather conditions while offering smart, data-driven insights.
