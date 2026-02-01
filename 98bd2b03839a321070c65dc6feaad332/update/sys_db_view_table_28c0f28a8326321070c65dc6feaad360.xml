@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>100</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-21 17:38:14</sys_created_on>
+        <sys_id>28c0f28a8326321070c65dc6feaad360</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_risk_advanced_consolidated_data_store</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sys_db_view_table_28c0f28a8326321070c65dc6feaad360</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-21 17:38:14</sys_updated_on>
+        <table>sn_risk_advanced_consolidated_data_store</table>
+        <variable_prefix>cds</variable_prefix>
+        <view display_value="policy_exception_risk_assessment_view">e4c0f28a8326321070c65dc6feaad334</view>
+        <where_clause/>
+    </sys_db_view_table>
+</record_update>

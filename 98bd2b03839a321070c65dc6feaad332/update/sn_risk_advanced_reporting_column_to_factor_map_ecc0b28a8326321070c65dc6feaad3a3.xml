@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_risk_advanced_reporting_column_to_factor_map">
+    <sn_risk_advanced_reporting_column_to_factor_map action="INSERT_OR_UPDATE">
+        <attributes>{"assessment_type":"inherent","factor_id":"b11bb35f0f010110580c95758b767edf"}</attributes>
+        <column display_value="String 3" element="string_3" name="sn_risk_advanced_consolidated_data_store">0c9fae4283e2321070c65dc6feaad3ed</column>
+        <configuration_identifier display_value="IT Risk Assessment">036d2b570f010110580c95758b767ea4</configuration_identifier>
+        <display_order>5</display_order>
+        <label>Likelihood </label>
+        <sys_class_name>sn_risk_advanced_reporting_column_to_factor_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-21 17:38:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ecc0b28a8326321070c65dc6feaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sn_risk_advanced_reporting_column_to_factor_map_ecc0b28a8326321070c65dc6feaad3a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-21 17:38:13</sys_updated_on>
+    </sn_risk_advanced_reporting_column_to_factor_map>
+    <sys_translated_text action="delete_multiple" query="documentkey=ecc0b28a8326321070c65dc6feaad3a3"/>
+</record_update>

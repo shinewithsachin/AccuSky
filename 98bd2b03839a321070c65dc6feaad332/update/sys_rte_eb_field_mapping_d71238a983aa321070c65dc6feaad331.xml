@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_field_mapping">
+    <sys_rte_eb_field_mapping action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <referenced_sys_rte_eb_entity/>
+        <source_sys_rte_eb_field display_value="u_name">5f1238a983aa321070c65dc6feaad32a</source_sys_rte_eb_field>
+        <sys_class_name>sys_rte_eb_field_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:07:57</sys_created_on>
+        <sys_id>d71238a983aa321070c65dc6feaad331</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Laptop Graph Import">08f1f82983aa321070c65dc6feaad39d</sys_rte_eb_definition>
+        <sys_rte_eb_entity_mapping display_value="impTotemp">1b12f4a983aa321070c65dc6feaad3f3</sys_rte_eb_entity_mapping>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sys_rte_eb_field_mapping_d71238a983aa321070c65dc6feaad331</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:07:57</sys_updated_on>
+        <target_sys_rte_eb_field display_value="u_name">d31238a983aa321070c65dc6feaad32e</target_sys_rte_eb_field>
+    </sys_rte_eb_field_mapping>
+</record_update>

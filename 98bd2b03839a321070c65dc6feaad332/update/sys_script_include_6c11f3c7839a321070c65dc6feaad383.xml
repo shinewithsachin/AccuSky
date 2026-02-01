@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1898047_accusky.WeatherHelper</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>WeatherHelper</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var WeatherHelper = Class.create();
+WeatherHelper.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getWeatherData: function() {
+        var city = this.getParameter('sysparm_city');
+        if (!city) return JSON.stringify({ error: "City is required" });
+
+        var result = {
+            location: '',
+            current: {},
+            forecast: []
+        };
+
+        try {
+            // ===== STEP 1: LOCATION SEARCH =====
+            var rLoc = new sn_ws.RESTMessageV2('AccuWeatherAPI', 'GetLocation');
+            rLoc.setStringParameterNoEscape('q', city);
+            var respLoc = rLoc.execute();
+
+            if (respLoc.getStatusCode() !== 200) {
+                return JSON.stringify({ error: "Location API failed" });
+            }
+
+            var locBody = JSON.parse(respLoc.getBody());
+            if (!locBody || locBody.length === 0) {
+                return JSON.stringify({ error: "City not found" });
+            }
+
+            var locationKey = locBody[0].Key;
+            result.location = locBody[0].EnglishName + ", " +
+                              locBody[0].Country.EnglishName;
+
+            // ===== STEP 2: 5-DAY FORECAST =====
+            var rFore = new sn_ws.RESTMessageV2('AccuWeatherAPI', 'GetForecast');
+            rFore.setStringParameterNoEscape('locationKey', locationKey);
+            var respFore = rFore.execute();
+
+            if (respFore.getStatusCode() === 200) {
+                var foreBody = JSON.parse(respFore.getBody());
+                result.forecast = foreBody.DailyForecasts || [];
+            }
+
+            // ===== STEP 3: CURRENT CONDITIONS =====
+            var rCurr = new sn_ws.RESTMessageV2('AccuWeatherAPI', 'GetCurrentConditions');
+            rCurr.setStringParameterNoEscape('locationKey', locationKey);
+            var respCurr = rCurr.execute();
+
+            if (respCurr.getStatusCode() === 200) {
+                var currBody = JSON.parse(respCurr.getBody());
+                if (currBody && currBody.length > 0) {
+                    var c = currBody[0];
+                    result.current = {
+                        temp: c.Temperature.Metric.Value,
+                        weatherText: c.WeatherText,
+                        realFeel: c.RealFeelTemperature.Metric.Value,
+                        wind: c.Wind.Speed.Metric.Value + " " + c.Wind.Speed.Metric.Unit,
+                        humidity: c.RelativeHumidity,
+                        visibility: c.Visibility.Metric.Value + " " + c.Visibility.Metric.Unit,
+                        uvIndex: c.UVIndex,
+                        uvText: c.UVIndexText,
+                        icon: c.WeatherIcon
+                    };
+                }
+            }
+
+        } catch (ex) {
+            gs.error("AccuSky Error: " + ex.message);
+            result.error = "Weather service unavailable";
+        }
+
+        return JSON.stringify(result);
+    },
+
+    type: 'WeatherHelper'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 14:44:28</sys_created_on>
+        <sys_id>6c11f3c7839a321070c65dc6feaad383</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>WeatherHelper</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sys_script_include_6c11f3c7839a321070c65dc6feaad383</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 18:01:26</sys_updated_on>
+    </sys_script_include>
+</record_update>

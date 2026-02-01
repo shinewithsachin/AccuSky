@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table_field">
+    <sys_db_view_table_field action="DELETE">
+        <field>risk_assessment</field>
+        <sys_class_name>sys_db_view_table_field</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-21 17:38:14</sys_created_on>
+        <sys_id>38c0f28a8326321070c65dc6feaad3e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>risk_assessment</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sys_db_view_table_field_38c0f28a8326321070c65dc6feaad3e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-21 17:38:14</sys_updated_on>
+        <table/>
+        <view_table display_value="sn_risk_advanced_consolidated_data_store">28c0f28a8326321070c65dc6feaad360</view_table>
+    </sys_db_view_table_field>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</application>
+        <file_path/>
+        <instance_id>8a720067fbaf4e140c92f633beefdc70</instance_id>
+        <instance_name>dev281216</instance_name>
+        <name>sys_db_view_table_field_38c0f28a8326321070c65dc6feaad3e1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table_field"><sys_db_view_table_field action="INSERT_OR_UPDATE"><field>risk_assessment</field><sys_class_name>sys_db_view_table_field</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-01-21 17:38:14</sys_created_on><sys_id>38c0f28a8326321070c65dc6feaad3e1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>risk_assessment</sys_name><sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package><sys_policy/><sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope><sys_update_name>sys_db_view_table_field_38c0f28a8326321070c65dc6feaad3e1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-01-21 17:38:14</sys_updated_on><table/><view_table display_value="sn_risk_advanced_consolidated_data_store">28c0f28a8326321070c65dc6feaad360</view_table></sys_db_view_table_field></record_update>]]></payload>
+        <payload_hash>-1292728766</payload_hash>
+        <record_name>risk_assessment</record_name>
+        <reverted_from/>
+        <source>90bd2b03839a321070c65dc6feaad347</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-21 17:38:14</sys_created_on>
+        <sys_id>38c0f28a8326321070c65dc6feaad3e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19be1a2b2710000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-21 17:38:14</sys_updated_on>
+        <type>View Field</type>
+        <update_guid>f4c0f28a9b26321011ddacba9290fce4</update_guid>
+        <update_guid_history>f4c0f28a9b26321011ddacba9290fce4:-1292728766</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-21 17:38:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view_table_field">sys_db_view_table_field</sys_db_object>
+        <sys_id>54e97954dbd146d89e593332c6e6a351</sys_id>
+        <sys_metadata>38c0f28a8326321070c65dc6feaad3e1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>risk_assessment</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_parent display_value="sn_risk_advanced_consolidated_data_store">28c0f28a8326321070c65dc6feaad360</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_scope_delete display_value="">8604729222b84a0c95e11fc997058a10</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_field_38c0f28a8326321070c65dc6feaad3e1</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_field_38c0f28a8326321070c65dc6feaad3e1">38c0f28a8326321070c65dc6feaad3e5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-21 17:38:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
