@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_assigned_to_email" label="Assigned_To_Email" language="en" table="x_1898047_accusky_my_laptop_project">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_assigned_to_email</element>
+            <help/>
+            <hint/>
+            <label>Assigned_To_Email</label>
+            <language>en</language>
+            <name>x_1898047_accusky_my_laptop_project</name>
+            <plural>Assigned_To_Emails</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-19 18:59:36</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Assigned_To_Email</sys_name>
+            <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+            <sys_update_name>sys_documentation_x_1898047_accusky_my_laptop_project_u_assigned_to_email_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-19 18:59:36</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

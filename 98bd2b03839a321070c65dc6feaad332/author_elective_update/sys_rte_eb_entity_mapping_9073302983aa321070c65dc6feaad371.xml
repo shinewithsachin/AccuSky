@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_entity_mapping">
+    <sys_rte_eb_entity_mapping action="DELETE">
+        <condition_script><![CDATA[/* Example Script  (function() {          //step1: access the input variables         if (input && input.temp.u_type == 'Disk') {         //step2: return true/false             return true;         }         return false;  })(); */  (function(input) {     // Add your code here. })(input);]]></condition_script>
+        <encoded_query/>
+        <entity_mapping_group/>
+        <ignore>false</ignore>
+        <is_conditional>false</is_conditional>
+        <name>tempToSerial Number 1</name>
+        <order>100</order>
+        <source_sys_rte_eb_entity display_value="temp">d712f4a983aa321070c65dc6feaad303</source_sys_rte_eb_entity>
+        <sys_class_name>sys_rte_eb_entity_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:13:45</sys_created_on>
+        <sys_id>9073302983aa321070c65dc6feaad371</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>tempToSerial Number 1</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Laptop Graph Import">08f1f82983aa321070c65dc6feaad39d</sys_rte_eb_definition>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sys_rte_eb_entity_mapping_9073302983aa321070c65dc6feaad371</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:13:45</sys_updated_on>
+        <target_sys_rte_eb_entity display_value="Serial Number 1">d073302983aa321070c65dc6feaad36d</target_sys_rte_eb_entity>
+    </sys_rte_eb_entity_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</application>
+        <file_path/>
+        <instance_id>8a720067fbaf4e140c92f633beefdc70</instance_id>
+        <instance_name>dev281216</instance_name>
+        <name>sys_rte_eb_entity_mapping_9073302983aa321070c65dc6feaad371</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_entity_mapping"&gt;&lt;sys_rte_eb_entity_mapping action="INSERT_OR_UPDATE"&gt;&lt;condition_script&gt;&lt;![CDATA[/* Example Script  (function() {          //step1: access the input variables         if (input &amp;&amp; input.temp.u_type == 'Disk') {         //step2: return true/false             return true;         }         return false;  })(); */  (function(input) {     // Add your code here. })(input);]]&gt;&lt;/condition_script&gt;&lt;encoded_query/&gt;&lt;entity_mapping_group/&gt;&lt;ignore&gt;false&lt;/ignore&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;name&gt;tempToSerial Number 1&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;source_sys_rte_eb_entity display_value="temp"&gt;d712f4a983aa321070c65dc6feaad303&lt;/source_sys_rte_eb_entity&gt;&lt;sys_class_name&gt;sys_rte_eb_entity_mapping&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-01-19 19:13:45&lt;/sys_created_on&gt;&lt;sys_id&gt;9073302983aa321070c65dc6feaad371&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;tempToSerial Number 1&lt;/sys_name&gt;&lt;sys_package display_value="AccuSky " source="x_1898047_accusky"&gt;98bd2b03839a321070c65dc6feaad332&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="Laptop Graph Import"&gt;08f1f82983aa321070c65dc6feaad39d&lt;/sys_rte_eb_definition&gt;&lt;sys_scope display_value="AccuSky "&gt;98bd2b03839a321070c65dc6feaad332&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_entity_mapping_9073302983aa321070c65dc6feaad371&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-01-19 19:13:45&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_entity display_value="Serial Number 1"&gt;d073302983aa321070c65dc6feaad36d&lt;/target_sys_rte_eb_entity&gt;&lt;/sys_rte_eb_entity_mapping&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1080365016</payload_hash>
+        <record_name>tempToSerial Number 1</record_name>
+        <reverted_from/>
+        <source>90bd2b03839a321070c65dc6feaad347</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:13:45</sys_created_on>
+        <sys_id>9c73b46d83aa321070c65dc6feaad3c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19bd7ad6d060000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:13:45</sys_updated_on>
+        <type>RTE Entity Mapping</type>
+        <update_guid>5c73b46d20aa3210a0cc78b2fa8ba7c8</update_guid>
+        <update_guid_history>5c73b46d20aa3210a0cc78b2fa8ba7c8:1080365016</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:14:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_entity_mapping">sys_rte_eb_entity_mapping</sys_db_object>
+        <sys_id>9e419de908b04ea892b8b64de6443040</sys_id>
+        <sys_metadata>9073302983aa321070c65dc6feaad371</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>tempToSerial Number 1</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_scope_delete display_value="">8604729222b84a0c95e11fc997058a10</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_entity_mapping_9073302983aa321070c65dc6feaad371</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_entity_mapping_9073302983aa321070c65dc6feaad371">9c73b46d83aa321070c65dc6feaad3c9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:14:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

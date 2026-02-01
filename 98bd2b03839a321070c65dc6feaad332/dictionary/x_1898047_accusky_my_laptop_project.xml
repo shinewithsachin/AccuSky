@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="853038a583aa321070c65dc6feaad3b3" extends="sys_import_set_row" label="My Laptop Project" max_length="40" name="x_1898047_accusky_my_laptop_project" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Model_ID" label="Model_ID" max_length="40" name="u_model_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Name" label="Name" max_length="40" name="u_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Assigned_To_Email" label="Assigned_To_Email" max_length="40" name="u_assigned_to_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Serial_Number" label="Serial_Number" max_length="40" name="u_serial_number" type="string"/>
+    </element>
+</database>

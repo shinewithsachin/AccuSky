@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Weather Dashboard - Container 2</name>
+        <order>2</order>
+        <semantic_tag/>
+        <sp_page display_value="weather_view">b48b770f83da321070c65dc6feaad34d</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 16:44:05</sys_created_on>
+        <sys_id>670e845f835e321070c65dc6feaad372</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Weather Dashboard - Container 2</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sp_container_670e845f835e321070c65dc6feaad372</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 20:22:03</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</application>
+        <file_path/>
+        <instance_id>8a720067fbaf4e140c92f633beefdc70</instance_id>
+        <instance_name>dev281216</instance_name>
+        <name>sp_container_670e845f835e321070c65dc6feaad372</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Weather Dashboard - Container 2</name><order>2</order><semantic_tag/><sp_page display_value="weather_view">b48b770f83da321070c65dc6feaad34d</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-01-12 16:44:05</sys_created_on><sys_id>670e845f835e321070c65dc6feaad372</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Weather Dashboard - Container 2</sys_name><sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package><sys_policy/><sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope><sys_update_name>sp_container_670e845f835e321070c65dc6feaad372</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-01-12 20:22:03</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-737994585</payload_hash>
+        <record_name>Weather Dashboard - Container 2</record_name>
+        <reverted_from/>
+        <source>90bd2b03839a321070c65dc6feaad347</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 20:22:03</sys_created_on>
+        <sys_id>fcff74138316721070c65dc6feaad315</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19bb3df71ad0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 20:22:03</sys_updated_on>
+        <type>Container</type>
+        <update_guid>bcff741358167210bd4843f63816a514</update_guid>
+        <update_guid_history>bcff741358167210bd4843f63816a514:-737994585,deeff013d1167210bc7cae88753e5ecd:1707865958,e70e48dff95e32102894d76f9ff4e318:-141240795</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Weather Dashboard - Container 2">56ff74138316721070c65dc6feaad332</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 20:22:10</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>0915588c5324464c8187c0576cc98810</sys_id>
+        <sys_metadata>670e845f835e321070c65dc6feaad372</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Weather Dashboard - Container 2</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_scope_delete display_value="">8604729222b84a0c95e11fc997058a10</sys_scope_delete>
+        <sys_update_name>sp_container_670e845f835e321070c65dc6feaad372</sys_update_name>
+        <sys_update_version display_value="sp_container_670e845f835e321070c65dc6feaad372">fcff74138316721070c65dc6feaad315</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 20:22:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

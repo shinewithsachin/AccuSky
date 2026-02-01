@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_inst_entity">
+    <cmdb_inst_entity action="DELETE">
+        <child_id_field/>
+        <lookup_for_entity display_value="Personal Computer">c28238a983aa321070c65dc6feaad39e</lookup_for_entity>
+        <name>Serial Number 1</name>
+        <parent_entity/>
+        <parent_id_field/>
+        <path>cmdb_serial_number_1</path>
+        <related_for_entity/>
+        <relationship_type/>
+        <sys_class_name>cmdb_inst_entity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:13:45</sys_created_on>
+        <sys_id>d073302983aa321070c65dc6feaad36d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Serial Number 1</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Laptop Graph Import">08f1f82983aa321070c65dc6feaad39d</sys_rte_eb_definition>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>cmdb_inst_entity_d073302983aa321070c65dc6feaad36d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:13:45</sys_updated_on>
+        <table>cmdb_serial_number</table>
+    </cmdb_inst_entity>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</application>
+        <file_path/>
+        <instance_id>8a720067fbaf4e140c92f633beefdc70</instance_id>
+        <instance_name>dev281216</instance_name>
+        <name>cmdb_inst_entity_d073302983aa321070c65dc6feaad36d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_inst_entity"><cmdb_inst_entity action="INSERT_OR_UPDATE"><child_id_field/><lookup_for_entity display_value="Personal Computer">c28238a983aa321070c65dc6feaad39e</lookup_for_entity><name>Serial Number 1</name><parent_entity/><parent_id_field/><path>cmdb_serial_number_1</path><related_for_entity/><relationship_type/><sys_class_name>cmdb_inst_entity</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-01-19 19:13:45</sys_created_on><sys_id>d073302983aa321070c65dc6feaad36d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Serial Number 1</sys_name><sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package><sys_policy/><sys_rte_eb_definition display_value="Laptop Graph Import">08f1f82983aa321070c65dc6feaad39d</sys_rte_eb_definition><sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope><sys_update_name>cmdb_inst_entity_d073302983aa321070c65dc6feaad36d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-01-19 19:13:45</sys_updated_on><table>cmdb_serial_number</table></cmdb_inst_entity></record_update>]]></payload>
+        <payload_hash>-74036827</payload_hash>
+        <record_name>Serial Number 1</record_name>
+        <reverted_from/>
+        <source>90bd2b03839a321070c65dc6feaad347</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:13:45</sys_created_on>
+        <sys_id>1873302983aa321070c65dc6feaad370</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19bd7ad6ced0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:13:45</sys_updated_on>
+        <type>CMDB Integration Studio Entity</type>
+        <update_guid>d473302960aa32104440fd326413a06f</update_guid>
+        <update_guid_history>d473302960aa32104440fd326413a06f:-74036827</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Serial Number 1">82a37c6d83aa321070c65dc6feaad3af</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:14:41</sys_created_on>
+        <sys_db_object display_value="" name="cmdb_inst_entity">cmdb_inst_entity</sys_db_object>
+        <sys_id>d0a3a63350d54dd89df28dcf499d5de1</sys_id>
+        <sys_metadata>d073302983aa321070c65dc6feaad36d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Serial Number 1</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_scope_delete display_value="">8604729222b84a0c95e11fc997058a10</sys_scope_delete>
+        <sys_update_name>cmdb_inst_entity_d073302983aa321070c65dc6feaad36d</sys_update_name>
+        <sys_update_version display_value="cmdb_inst_entity_d073302983aa321070c65dc6feaad36d">1873302983aa321070c65dc6feaad370</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:14:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

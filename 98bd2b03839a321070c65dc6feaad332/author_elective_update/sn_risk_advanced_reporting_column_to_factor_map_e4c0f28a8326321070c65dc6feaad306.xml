@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_risk_advanced_reporting_column_to_factor_map">
+    <sn_risk_advanced_reporting_column_to_factor_map action="DELETE">
+        <attributes>{"assessment_type":"residual","factor_id":"81febab477230110878c49647a5a99fd"}</attributes>
+        <column display_value="String 1" element="string_1" name="sn_risk_advanced_consolidated_data_store">889fae4283e2321070c65dc6feaad3cd</column>
+        <configuration_identifier display_value="Policy exception risk assessment">05fe7ab477230110878c49647a5a9980</configuration_identifier>
+        <display_order>2</display_order>
+        <label>Impact</label>
+        <sys_class_name>sn_risk_advanced_reporting_column_to_factor_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-21 17:38:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>e4c0f28a8326321070c65dc6feaad306</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sn_risk_advanced_reporting_column_to_factor_map_e4c0f28a8326321070c65dc6feaad306</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-21 17:38:13</sys_updated_on>
+    </sn_risk_advanced_reporting_column_to_factor_map>
+    <sys_translated_text action="DELETE" query="documentkey=e4c0f28a8326321070c65dc6feaad306"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</application>
+        <file_path/>
+        <instance_id>8a720067fbaf4e140c92f633beefdc70</instance_id>
+        <instance_name>dev281216</instance_name>
+        <name>sn_risk_advanced_reporting_column_to_factor_map_e4c0f28a8326321070c65dc6feaad306</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_risk_advanced_reporting_column_to_factor_map"><sn_risk_advanced_reporting_column_to_factor_map action="INSERT_OR_UPDATE"><attributes>{"assessment_type":"residual","factor_id":"81febab477230110878c49647a5a99fd"}</attributes><column display_value="String 1" element="string_1" name="sn_risk_advanced_consolidated_data_store">889fae4283e2321070c65dc6feaad3cd</column><configuration_identifier display_value="Policy exception risk assessment">05fe7ab477230110878c49647a5a9980</configuration_identifier><display_order>2</display_order><label>Impact</label><sys_class_name>sn_risk_advanced_reporting_column_to_factor_map</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-01-21 17:38:13</sys_created_on><sys_domain>global</sys_domain><sys_domain_path/><sys_id>e4c0f28a8326321070c65dc6feaad306</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package><sys_policy/><sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope><sys_update_name>sn_risk_advanced_reporting_column_to_factor_map_e4c0f28a8326321070c65dc6feaad306</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-01-21 17:38:13</sys_updated_on></sn_risk_advanced_reporting_column_to_factor_map><sys_translated_text action="delete_multiple" query="documentkey=e4c0f28a8326321070c65dc6feaad306"/></record_update>]]></payload>
+        <payload_hash>14244458</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>90bd2b03839a321070c65dc6feaad347</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-21 17:38:13</sys_created_on>
+        <sys_id>64c0f28a8326321070c65dc6feaad309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19be1a2af690000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-21 17:38:13</sys_updated_on>
+        <type>Reporting column to factor mapping</type>
+        <update_guid>24c0f28ae626321018751b91e6b6d308</update_guid>
+        <update_guid_history>24c0f28ae626321018751b91e6b6d308:14244458</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">39c03a8a8326321070c65dc6feaad3bb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-21 17:38:18</sys_created_on>
+        <sys_db_object display_value="" name="sn_risk_advanced_reporting_column_to_factor_map">sn_risk_advanced_reporting_column_to_factor_map</sys_db_object>
+        <sys_id>12ab1389781849a48d11bc99729eef39</sys_id>
+        <sys_metadata>e4c0f28a8326321070c65dc6feaad306</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_scope_delete display_value="">8604729222b84a0c95e11fc997058a10</sys_scope_delete>
+        <sys_update_name>sn_risk_advanced_reporting_column_to_factor_map_e4c0f28a8326321070c65dc6feaad306</sys_update_name>
+        <sys_update_version display_value="sn_risk_advanced_reporting_column_to_factor_map_e4c0f28a8326321070c65dc6feaad306">64c0f28a8326321070c65dc6feaad309</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-21 17:38:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

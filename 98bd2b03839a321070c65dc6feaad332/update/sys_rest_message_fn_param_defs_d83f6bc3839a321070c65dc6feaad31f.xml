@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_param_defs">
+    <sys_rest_message_fn_param_defs action="INSERT_OR_UPDATE">
+        <name>apikey</name>
+        <order>100</order>
+        <rest_message_function display_value="GetLocation">df2f2bc3839a321070c65dc6feaad39a</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_param_defs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 14:32:05</sys_created_on>
+        <sys_id>d83f6bc3839a321070c65dc6feaad31f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>apikey</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sys_rest_message_fn_param_defs_d83f6bc3839a321070c65dc6feaad31f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 14:32:05</sys_updated_on>
+        <value>zpka_50ecd09f7f0d4a32a395e74cf4e1671f_a0a6c1d4</value>
+    </sys_rest_message_fn_param_defs>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_robust_import_set_transformer">
+    <sys_robust_import_set_transformer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <batch_size>100</batch_size>
+        <description/>
+        <name>Laptop Graph Import</name>
+        <properties/>
+        <robust_transform_engine display_value="Laptop Graph Import">08f1f82983aa321070c65dc6feaad39d</robust_transform_engine>
+        <source_table>x_1898047_accusky_my_laptop_project</source_table>
+        <sys_class_name>sys_robust_import_set_transformer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:07:11</sys_created_on>
+        <sys_id>84f1b0a983aa321070c65dc6feaad392</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Laptop Graph Import</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sys_robust_import_set_transformer_84f1b0a983aa321070c65dc6feaad392</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:07:11</sys_updated_on>
+        <verbose>false</verbose>
+    </sys_robust_import_set_transformer>
+</record_update>

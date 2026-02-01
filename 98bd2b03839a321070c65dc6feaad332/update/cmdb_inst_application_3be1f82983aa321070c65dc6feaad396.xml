@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_inst_application">
+    <cmdb_inst_application action="INSERT_OR_UPDATE">
+        <discovery_source>Manual Entry</discovery_source>
+        <name>Laptop Graph Import</name>
+        <sys_class_name>cmdb_inst_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-19 19:07:10</sys_created_on>
+        <sys_id>3be1f82983aa321070c65dc6feaad396</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Laptop Graph Import</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>cmdb_inst_application_3be1f82983aa321070c65dc6feaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-19 19:07:10</sys_updated_on>
+    </cmdb_inst_application>
+</record_update>

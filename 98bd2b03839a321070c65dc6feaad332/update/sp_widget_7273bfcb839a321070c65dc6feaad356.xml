@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $timeout, $filter) {
+  var c = this;
+  c.searchCity = "Delhi"; 
+  c.data.weather = {};
+  c.currentDate = new Date();
+  c.activeTab = 'today';
+  var myChart = null; 
+
+  c.init = function() {
+    c.fetchWeather(c.searchCity);
+  };
+
+  // Tab Switcher
+  c.setTab = function(tabName) {
+      c.activeTab = tabName;
+  };
+
+  // --- 1. VIBRANT ICON LOGIC ---
+  c.getIcon = function(id) {
+    if (!id) return 'fa fa-question-circle text-muted'; 
+    if (id <= 5 || id >= 30) return 'fa fa-sun-o weather-icon-sun'; // Sunny
+    if (id <= 11 || (id >= 35 && id <= 38)) return 'fa fa-cloud weather-icon-cloud'; // Cloudy
+    if (id <= 18 || id === 39 || id === 40) return 'fa fa-tint weather-icon-rain'; // Rain
+    if (id <= 29 || id >= 41) return 'fa fa-snowflake-o weather-icon-snow'; // Snow
+    return 'fa fa-cloud weather-icon-cloud'; 
+  };
+
+  // --- 2. INTELLIGENT ADVICE LOGIC (Checks Temp + Icon) ---
+  c.getAdvice = function(id, tempVal) {
+    var temp = parseFloat(tempVal); // Ensure temp is a number
+
+    // Default Fallback
+    var advice = { title: "Good Day", message: "Enjoy the weather.", icon: "fa fa-smile-o", bgClass: "bg-cloudy" };
+    if (!id) return advice;
+
+    // --- PRIORITY 1: RAIN / SNOW (Safety First) ---
+    // Rain (IDs: 12-18, 39-40)
+    if (id <= 18 || id === 39 || id === 40) {
+        return { title: "Rain Alert", message: "Carry an umbrella.", icon: "fa fa-umbrella", bgClass: "bg-rainy" };
+    }
+    // Snow (IDs: 19-29, 41-44)
+    if ((id >= 19 && id <= 29) || (id >= 41)) {
+        return { title: "Snow Alert", message: "Drive carefully.", icon: "fa fa-snowflake-o", bgClass: "bg-cold" };
+    }
+
+    // --- PRIORITY 2: TEMPERATURE (Too Cold or Too Hot) ---
+    // Freezing Cold (< 5°C)
+    if (temp < 5) {
+        return { title: "Freezing!", message: "Wear heavy woolens.", icon: "fa fa-snowflake-o", bgClass: "bg-cold" };
+    }
+    // Chilly (< 15°C) -> Delhi Winter Logic
+    if (temp < 15) {
+        return { title: "Chilly Weather", message: "Keep a jacket handy.", icon: "fa fa-snowflake-o", bgClass: "bg-cold" };
+    }
+    // Heatwave (> 35°C)
+    if (temp > 35) {
+        return { title: "Heatwave Alert", message: "Stay hydrated & cool.", icon: "fa fa-fire", bgClass: "bg-sunny" };
+    }
+    // Hot (> 30°C)
+    if (temp > 30) {
+        return { title: "It's Hot", message: "Wear light clothes.", icon: "fa fa-sun-o", bgClass: "bg-sunny" };
+    }
+
+    // --- PRIORITY 3: SKY CONDITIONS (Sunny/Cloudy) ---
+    // Sunny
+    if (id <= 5 || id >= 30) {
+        return { title: "Sunny Vibes", message: "Use sunscreen/sunglasses.", icon: "fa fa-sun-o", bgClass: "bg-sunny" };
+    }
+    
+    // Cloudy (Default)
+    return { title: "Cloudy Sky", message: "Perfect weather for a walk.", icon: "fa fa-cloud", bgClass: "bg-cloudy" };
+  };
+
+  // Search Handler
+  c.checkEnter = function(keyEvent) {
+    if (keyEvent.which === 13) {
+      c.fetchWeather(c.searchCity);
+    }
+  };
+
+  // Fetch Data
+  c.fetchWeather = function(city) {
+    var ga = new GlideAjax('x_1898047_accusky.WeatherHelper');
+    ga.addParam('sysparm_name', 'getWeatherData');
+    ga.addParam('sysparm_city', city);
+    ga.getXMLAnswer(function(response) {
+      if (response) {
+        var result = JSON.parse(response);
+        if (result.error) {
+            console.log("API Error: " + result.error);
+            return;
+        }
+        c.data.weather = result;
+        
+        // Refresh Chart
+        $timeout(function(){
+            c.renderChart();
+        }, 500);
+      }
+    });
+  };
+
+  // Render Chart
+  c.renderChart = function() {
+      var ctx = document.getElementById('rainChart');
+      if(!ctx) return;
+      if (myChart) { myChart.destroy(); }
+
+      var labels = [];
+      var dataPoints = [];
+      
+      if (c.data.weather.forecast) {
+          c.data.weather.forecast.forEach(function(day) {
+              var dateObj = new Date(day.Date); 
+              var dayName = dateObj.toLocaleDateString('en-US', { weekday: 'short' });
+              labels.push(dayName);
+              dataPoints.push(day.Temperature.Maximum.Value);
+          });
+      }
+
+      myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: labels, 
+              datasets: [{
+                  label: 'Max Temp (°C)',
+                  data: dataPoints, 
+                  borderColor: '#54a0ff',
+                  borderWidth: 3,
+                  backgroundColor: 'rgba(84, 160, 255, 0.1)',
+                  pointBackgroundColor: '#fff',
+                  pointBorderColor: '#54a0ff',
+                  lineTension: 0.4, 
+                  pointRadius: 4
+              }]
+          },
+          options: {
+              maintainAspectRatio: false, // Allows height control via CSS
+              legend: { display: false },
+              scales: {
+                  xAxes: [{ gridLines: { display: false }, ticks: { fontColor: '#888' } }],
+                  yAxes: [{ display: true, gridLines: { color: '#333', drawBorder: false }, ticks: { fontColor: '#888' } }]
+              }
+          }
+      });
+  };
+
+  c.init();
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* GLOBAL CONTAINER */
+.weather-dashboard {
+  background: linear-gradient(135deg, #1e1e2f 0%, #111113 100%);
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 850px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.search-box {
+  background: #2b2b2e;
+  padding: 12px 25px;
+  border-radius: 30px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-box:focus-within {
+  box-shadow: 0 0 10px rgba(84, 160, 255, 0.5);
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  margin-left: 10px;
+  outline: none;
+  font-size: 1.1em;
+}
+
+.current-date { 
+    color: #ccc; 
+    font-size: 1em; 
+    margin-left: 15px; 
+    font-weight: 500;
+}
+
+/* TABS */
+.nav-tabs-custom { margin-bottom: 25px; }
+.nav-tabs-custom span {
+    margin-right: 25px;
+    color: #888;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding-bottom: 8px;
+    transition: all 0.3s ease;
+}
+.nav-tabs-custom span:hover { color: #fff; }
+.nav-tabs-custom span.active {
+    color: #fff;
+    border-bottom: 3px solid #54a0ff;
+}
+
+/* CARDS COMMON */
+.stat-card, .promo-card, .day-card {
+  background-color: #232325;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover, .day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    background-color: #2a2a2d;
+}
+
+/* TODAY CARD */
+.today-highlight {
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  color: #111;
+  padding: 30px;
+  border-radius: 25px;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(102, 166, 255, 0.3);
+}
+.today-highlight h1 { font-size: 4.5em; margin: 10px 0; font-weight: 800; letter-spacing: -2px; }
+.main-temp-layout { display: flex; justify-content: space-between; align-items: center; }
+
+/* FORECAST ROW */
+.forecast-list {
+    display: flex;
+    gap: 15px;
+    height: 100%;
+}
+.day-card {
+    flex: 1;
+    background-color: #2b2b2e;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* STATS GRID */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 140px;
+}
+.stat-title { color: #aaa; font-size: 1em; text-transform: uppercase; letter-spacing: 1px; }
+.stat-value { font-size: 2em; font-weight: bold; margin: 10px 0; }
+
+/* --- RIGHT COLUMN UPDATES --- */
+
+/* 1. Compact Chart Card */
+.chart-card {
+    height: 280px; /* FIXED SMALLER HEIGHT */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #232325;
+    border-radius: 20px;
+}
+.chart-container { 
+    flex-grow: 1; 
+    position: relative; 
+    width: 100%;
+    max-height: 200px;
+}
+
+/* 2. Smart Insight Card */
+.insight-card {
+    flex-grow: 1; /* Fills remaining space */
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.insight-card:hover { transform: translateY(-5px); }
+
+.insight-icon-box {
+    background: rgba(255,255,255,0.25);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Smart Card Gradients */
+.bg-sunny { background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #fff; text-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.bg-rainy { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #fff; }
+.bg-cold { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); color: #fff; }
+.bg-cloudy { background: linear-gradient(135deg, #606c88 0%, #3f4c6b 100%); color: #fff; }
+
+/* --- VIBRANT ICONS (Bauaa Special) --- */
+.weather-icon-sun {
+    color: #FFD700 !important;
+    text-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+    animation: slow-spin 20s linear infinite;
+}
+.weather-icon-cloud {
+    color: #87CEEB !important; /* Asmani */
+    text-shadow: 0 0 15px rgba(135, 206, 235, 0.4);
+}
+.weather-icon-rain {
+    color: #00BFFF !important;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+}
+.weather-icon-snow {
+    color: #ffffff !important;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+@keyframes slow-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>dark_weather_ui</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Dark Weather Dashboard</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 14:49:11</sys_created_on>
+        <sys_id>7273bfcb839a321070c65dc6feaad356</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Dark Weather Dashboard</sys_name>
+        <sys_package display_value="AccuSky " source="x_1898047_accusky">98bd2b03839a321070c65dc6feaad332</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccuSky ">98bd2b03839a321070c65dc6feaad332</sys_scope>
+        <sys_update_name>sp_widget_7273bfcb839a321070c65dc6feaad356</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 19:53:59</sys_updated_on>
+        <template><![CDATA[<div class="weather-dashboard">
+  <div class="top-bar">
+    <div class="location-badge">
+      <h2 style="margin:0;"><i class="fa fa-map-marker" style="color:#54a0ff;"></i> {{c.data.weather.location || 'Locating...'}}</h2>
+    </div>
+    <div class="search-box">
+      <i class="fa fa-search search-icon" style="color:#888;"></i>
+      <input type="text" placeholder="Search City..." ng-model="c.searchCity" ng-keypress="c.checkEnter($event)">
+    </div>
+    <div class="user-profile">
+      <span class="current-date">{{c.currentDate | date:'fullDate'}}</span> 
+    </div>
+  </div>
+
+  <div class="nav-tabs-custom">
+    <span ng-class="{'active': c.activeTab === 'today'}" ng-click="c.setTab('today')">Overview</span>
+    <span ng-class="{'active': c.activeTab === 'forecast'}" ng-click="c.setTab('forecast')">5-Day Forecast</span>
+    <span ng-class="{'active': c.activeTab === 'history'}" ng-click="c.setTab('history')">History</span>
+  </div>
+
+  <div class="row main-content" style="flex-grow: 1;"> 
+    
+    <div class="col-md-8" style="display:flex; flex-direction:column; gap:20px;">
+      
+      <div ng-if="c.activeTab === 'today'">
+          <div class="today-highlight">
+            <div class="day-label" ng-if="c.data.weather.forecast">{{c.data.weather.forecast[0].Date | date:'EEEE'}}</div> 
+            <div class="main-temp-layout">
+               <h1 ng-if="c.data.weather.current.temp">{{c.data.weather.current.temp}}°</h1>
+               
+               <i class="{{c.getIcon(c.data.weather.current.icon)}}" style="font-size: 5em; margin-left: 20px;"></i>
+               
+            </div>
+            <p class="real-feel" ng-if="c.data.weather.current.realFeel">Real Feel <strong>{{c.data.weather.current.realFeel}}°</strong></p>
+            <div class="meta-row">
+              <span style="font-size:1.2em;">{{c.data.weather.current.weatherText}}</span>
+            </div>
+          </div>
+
+          <h3 class="section-title">Current Conditions</h3>
+          <div class="overview-grid">
+            <div class="stat-card">
+              <div class="stat-title"><i class="fa fa-wind"></i> Wind</div>
+              <div class="stat-value">{{c.data.weather.current.wind || '--'}}</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-title"><i class="fa fa-sun-o"></i> UV Index</div>
+              <div class="stat-value">{{c.data.weather.current.uvIndex || '--'}}</div>
+              <div class="stat-sub">{{c.data.weather.current.uvText}}</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-title"><i class="fa fa-tint"></i> Humidity</div>
+              <div class="stat-value">{{c.data.weather.current.humidity || '--'}}%</div>
+            </div>
+             <div class="stat-card">
+              <div class="stat-title"><i class="fa fa-eye"></i> Visibility</div>
+              <div class="stat-value">{{c.data.weather.current.visibility || '--'}}</div>
+            </div>
+          </div>
+      </div>
+
+      <div ng-if="c.activeTab === 'forecast'" style="height:100%;">
+          <div class="forecast-list" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:20px;">
+              <div class="day-card" ng-repeat="day in c.data.weather.forecast">
+                <div class="day-name" style="color:#54a0ff;">{{day.Date | date:'EEEE'}}</div>
+                <div style="font-size:0.9em; margin-bottom:10px; color:#aaa;">{{day.Date | date:'mediumDate'}}</div>
+                
+                <i class="{{c.getIcon(day.Day.Icon)}}" style="font-size: 3em; margin: 15px 0; display:block;"></i>
+                
+                <div class="temp-high" style="font-size:2em; font-weight:bold;">{{day.Temperature.Maximum.Value}}°</div>
+                <div class="temp-low">{{day.Temperature.Minimum.Value}}°</div>
+                <div style="margin-top:10px; color:#ddd;">{{day.Day.IconPhrase}}</div>
+              </div>
+          </div>
+      </div>
+
+      <div ng-if="c.activeTab === 'history'" style="height:100%; display:flex; align-items:center;">
+          <div class="promo-card" style="text-align:center; padding:50px; width:100%; border: 2px dashed #333;">
+              <i class="fa fa-lock" style="font-size:4em; color:#54a0ff; margin-bottom:20px;"></i>
+              <h3>Premium Feature Locked</h3>
+              <p style="color:#aaa; font-size:1.1em;">Historical weather data requires a Premium API subscription.</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" style="display:flex; flex-direction:column; gap:20px;">
+      
+      <div class="chart-card">
+        <h4 style="font-size:1.1em; margin-bottom:10px;">Temperature Trend</h4>
+        <div class="chart-container">
+           <canvas id="rainChart"></canvas>
+        </div>
+      </div>
+      
+      <div class="insight-card" ng-class="c.getAdvice(c.data.weather.current.icon, c.data.weather.current.temp).bgClass">
+        <div class="insight-icon-box">
+            <i class="{{c.getAdvice(c.data.weather.current.icon, c.data.weather.current.temp).icon}}" style="font-size: 3.5em;"></i>
+        </div>
+        <div class="insight-text">
+            <h3 style="margin:0; font-weight:700;">{{c.getAdvice(c.data.weather.current.icon, c.data.weather.current.temp).title}}</h3>
+            <p style="margin:5px 0 0 0; opacity:0.9; font-size:1.1em;">
+                {{c.getAdvice(c.data.weather.current.icon, c.data.weather.current.temp).message}}
+            </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>
