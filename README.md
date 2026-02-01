@@ -49,7 +49,14 @@ AccuSky manages a complex data flow to ensure security and performance.
 * **User Customization**: Allow users to toggle preferences between Celsius and Fahrenheit.
 
 ---
+## 📸 Screenshots
+![](Screenshot%202026-01-13%20030043.png)
 
-**Author**: Sachin Kumar  
-**Department**: Department of Computer Science, IIIT Guwahati  
-**Date**: January 12, 2026
+
+---
+
+## 📬 Contact
+Created by **Sachin Kumar** 
+* [LinkedIn Profile](https://www.linkedin.com/in/sachin-iiitg/)
+* [GitHub Profile](https://github.com/shinewithsachin)
+* [My Portfolio](https://build-your-portfolio-ceetocb.gamma.site/untitled-lsuym)
