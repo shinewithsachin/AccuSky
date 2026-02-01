@@ -1,5 +1,15 @@
 # AccuSky: Intelligent Weather Dashboard
 
+![ServiceNow](https://img.shields.io/badge/ServiceNow-293E40?style=for-the-badge&logo=servicenow&logoColor=white)
+![AngularJS](https://img.shields.io/badge/AngularJS-E23237?style=for-the-badge&logo=angularjs&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) 
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white) 
+![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=font-awesome&logoColor=white)
+![REST API](https://img.shields.io/badge/REST_API-005571?style=for-the-badge&logo=google-cloud&logoColor=white)
+
 AccuSky is a custom ServiceNow Service Portal application designed to provide real-time weather tracking, 5-day forecasting, and data visualization for cities globally. Beyond basic weather reporting, it features an **Intelligent Advice System** that interprets environmental data to provide actionable lifestyle recommendations, such as "Wear a jacket" or "Carry an umbrella".
 
 ---
