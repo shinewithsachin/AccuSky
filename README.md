@@ -1,9 +1,7 @@
 # AccuSky: Intelligent Weather Dashboard
 
-![ServiceNow](https://img.shields.io/badge/ServiceNow-293E40?style=for-the-badge&logo=servicenow&logoColor=white)
-![AngularJS](https://img.shields.io/badge/AngularJS-E23237?style=for-the-badge&logo=angularjs&logoColor=white) 
+![ServiceNow](https://img.shields.io/badge/ServiceNow-293E40?style=for-the-badge&logo=servicenow&logoColor=white) 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) 
-![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white) 
@@ -50,7 +48,7 @@ AccuSky manages a complex data flow to ensure security and performance.
 
 ## 💻 Key Technologies Used
 * **ServiceNow Platform**: Service Portal, Widget Editor, and Script Includes.
-* **Frontend**: AngularJS, JavaScript, and SCSS/CSS with Glassmorphism effects.
+* **Frontend**: JavaScript, and SCSS/CSS with Glassmorphism effects.
 * **Data Visualization**: Chart.js for line graphs.
 * **Integration**: Outbound REST Messages and AccuWeather API.
 * **Icons**: Font Awesome for dynamic, weather-specific icons.
